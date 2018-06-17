@@ -4,34 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <EditText
-        android:id="@+id/edtTxtLogin"
-        android:layout_width="wrap_content"
+        android:id="@+id/edtTxtServerIP"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:ems="10"
+        android:hint="服务器IP"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        android:text="59.66.134.19"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtServerPort"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edtTxtServerPort"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="服务器端口"
+        android:inputType="textPersonName"
+        android:text="60000"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtServerIP" />
+
+    <EditText
+        android:id="@+id/edtTxtLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="学号"
+        android:inputType="textPersonName"
+        android:text="2012011859"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtServerPort" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        app:layout_constraintBottom_toTopOf="@+id/btnReceive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnReceive"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="接收"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="断开"
+        app:layout_constraintBottom_toTopOf="@+id/tvReturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReceive" />
+
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/tvReturn"
+        android:text="登陆"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtLogin" />
@@ -40,14 +90,10 @@
         android:id="@+id/tvReturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout" />
 
 </android.support.constraint.ConstraintLayout>
